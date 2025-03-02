@@ -4,6 +4,7 @@ Steps to run this project :
 2. Run npm install on the terminal
 3. Run npm run dev and go to the mentioned link
 
+Project design : https://www.figma.com/design/WMzGcDu8FSVYxlb4KKMJTi/CollabNest?node-id=0-1&t=00cl0SM81eTSCL5u-1
 -----------------------------------------------------------------------
 
 More about NextJS :
