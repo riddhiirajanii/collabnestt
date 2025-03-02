@@ -1,9 +1,11 @@
 This will be the project directory of Team Draco for the PS CollabNest.
+
 Steps to run this project : 
 1. Clone this project on your device
 2. Run npm install on the terminal
 3. Run npm run dev and go to the mentioned link
-Project design : https://www.figma.com/design/WMzGcDu8FSVYxlb4KKMJTi/CollabNest?node-id=0-1&t=00cl0SM81eTSCL5u-1
+
+   Project design : https://www.figma.com/design/WMzGcDu8FSVYxlb4KKMJTi/CollabNest?node-id=0-1&t=00cl0SM81eTSCL5u-1
 
 -----------------------------------------------------------------------
 
