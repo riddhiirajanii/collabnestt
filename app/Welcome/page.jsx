@@ -24,7 +24,7 @@ export default function LandingPage() {
 
         {/* Tagline */}
         <div className="mt-auto">
-          <p className="text-white text-xl leading-relaxed ">
+          <p className="text-white text-l leading-relaxed ">
             Learn, collaborate, and grow with real-world projects, mentor support, and a community that helps you turn learning into impact.
           </p>
         </div>
