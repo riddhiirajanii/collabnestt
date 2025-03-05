@@ -8,9 +8,8 @@ import {
   TableRow 
 } from "@/components/ui/table";
 import { LeaderboardEntry } from '@/types/leaderboard';
-import { LeaderboardUserAvatar } from '@/components/leaderboard/LeaderboardUserAvatar';
-import { LeaderboardUserDomains } from '@/components/leaderboard/LeaderboardUserDomains';
-
+import { LeaderboardUserAvatar } from './LeaderboardUserAvatar';
+import { LeaderboardUserDomains } from './LeaderboardUserDomains';
 
 interface LeaderboardTableProps {
   entries: LeaderboardEntry[];
