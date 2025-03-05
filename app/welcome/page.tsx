@@ -1,7 +1,7 @@
 // app/page.jsx
 import Link from 'next/link';
 import Image from 'next/image';
-import { colors } from '@/../const';
+import { colors } from '@/const';
 
 export default function LandingPage() {
   return (

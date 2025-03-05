@@ -18,8 +18,8 @@ export default function Navbar() {
           />
         </Link>
         <div className="flex items-center space-x-4 m-3">
-          <Link href="/my-projects" className="hover:text-black">My Projects</Link>
-          <Link href="/discover" className="hover:text-black">Discover</Link>
+          <Link href="/dashboard" className="hover:text-black">My Projects</Link>
+          <Link href="/discovery" className="hover:text-black">Discover</Link>
           <Link href="/leaderboard" className="hover:text-black">Leaderboard</Link>
           <Link href="/profile" className="hover:text-black">Profile</Link>
         </div>
