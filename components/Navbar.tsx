@@ -93,4 +93,3 @@ const NavBar = () => {
 };
 
 export { NavBar };
-
