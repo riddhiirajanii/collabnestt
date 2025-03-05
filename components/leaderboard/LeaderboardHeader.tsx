@@ -1,6 +1,6 @@
 import React from 'react';
-import { LeaderboardSearchBar } from './LeaderboardSearchBar';
-import { LeaderboardFilters } from './LeaderboardFilters';
+import { LeaderboardSearchBar } from '@/components/leaderboard/LeaderboardSearchBar';
+import { LeaderboardFilters } from '@/components/leaderboard/LeaderboardFilters';
 
 export const LeaderboardHeader = () => {
   return (
@@ -15,3 +15,4 @@ export const LeaderboardHeader = () => {
     </div>
   );
 };
+

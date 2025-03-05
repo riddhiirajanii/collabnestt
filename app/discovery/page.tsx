@@ -37,33 +37,6 @@ const projects = [
 const Discovery = () => {
     return (
         <>
-            <nav className="flex items-center justify-between p-4 bg-white text-gray-600">
-                <div className="flex items-center">
-                    <a href="/" className="text-xl font-bold">
-                        <Image
-                            src="/Logo-black.svg"
-                            alt="CollabNest Logo"
-                            width={160}
-                            height={160}
-                            className="mr-2"
-                        />
-                    </a>
-                    <div className="flex items-center space-x-4 m-3">
-                    <a href="/my-projects" className="hover:text-black">My Projects</a>
-                    <a href="/discover" className="hover:text-black">Discover</a>
-                    <a href="/leaderboard" className="hover:text-black">Leaderboard</a>
-                    <a href="/profile" className="hover:text-black">Profile</a>
-                </div>
-                </div>
-                
-                <div className="flex items-center space-x-4">
-                    <Input type="text" placeholder="Search..." />
-                    <Avatar>
-                        <AvatarImage src="https://github.com/shadcn.png" />
-                        <AvatarFallback>CN</AvatarFallback>
-                    </Avatar>
-                </div>
-            </nav>
 
             <div className="mx-5">
                 <h1 className='text-3xl mt-5 font-bold'>Discover Recommended Projects</h1>
