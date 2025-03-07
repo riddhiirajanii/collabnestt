@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { FaStar } from 'react-icons/fa';
 
 const projects = [
     {
@@ -106,8 +107,10 @@ const Discovery = () => {
                                 <p className="text-gray-600 text-sm">{project.timeCommitment}&nbsp;&nbsp;{project.duration}</p>
                             </CardContent>
                             <CardFooter className="flex justify-end space-x-2">
-                                <Button variant="outline" className="w-auto bg-black text-white">Apply</Button>
-                                <Button variant="outline" className="w-auto">Star</Button>
+                            <Button variant="outline" className="w-auto bg-black text-white">Apply</Button>
+                                <Button variant="outline" className="w-auto flex items-center">
+                                    <FaStar className="mr-0.5" /> Star
+                                </Button>
                             </CardFooter>
                         </Card>
                     ))}
