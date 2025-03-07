@@ -107,10 +107,10 @@ const Discovery = () => {
                                 <p className="text-gray-600 text-sm">{project.timeCommitment}&nbsp;&nbsp;{project.duration}</p>
                             </CardContent>
                             <CardFooter className="flex justify-end space-x-2">
-                            <Button variant="outline" className="w-auto flex items-center">
+                            <Button variant="outline" className="w-auto bg-black text-white">Apply</Button>
+                                <Button variant="outline" className="w-auto flex items-center">
                                     <FaStar className="mr-0.5" /> Star
                                 </Button>
-                                <Button variant="outline" className="w-auto">Star</Button>
                             </CardFooter>
                         </Card>
                     ))}
