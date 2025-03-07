@@ -1,0 +1,94 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id                       Int       @id @default(autoincrement())
+    username                 String    @unique
+    name                     String
+    roll                     String    @unique
+    email                    String    @unique
+    password                 String
+    role                     Role      @default(USER)
+    rating                   Int       @default(0)
+    degree                   String?
+    year                     String?
+    department               String
+    picture                  String?
+    accountCreatedAt         DateTime  @default(now())
+    passwordChangedAt        DateTime?
+    passwordResetToken       String?
+    passwordResetTokenExpiry DateTime?
+
+    // relations
+    applications         Application[]
+    projectCreated       Project[]       @relation("ProjectAuthor")
+    projectsParticipated ProjectMember[]
+}
+
+enum Role {
+    USER
+    PROFESSOR
+    ADMIN
+}
+
+model Project {
+    id                 Int       @id @default(autoincrement())
+    authorId           Int
+    title              String
+    subheading         String?
+    description        String?
+    status             Status    @default(OPEN)
+    deadlineToApply    DateTime?
+    deadlineToComplete DateTime?
+    difficultyTag      String
+    requirementTags    Json[]
+    applicantCapacity  Int       @default(100)
+    selectionCapacity  Int       @default(10)
+    projectResources   Json[]
+    createdAt          DateTime  @default(now())
+    updatedAt          DateTime  @updatedAt
+
+    // relations
+    applications Application[]
+    members      ProjectMember[]
+    author       User            @relation("ProjectAuthor", fields: [authorId], references: [id])
+}
+
+enum Status {
+    OPEN
+    CLOSED
+}
+
+model Application {
+    id                Int               @id @default(autoincrement())
+    projectId         Int
+    applicantId       Int
+    dateOfApplication DateTime          @default(now())
+    status            ApplicationStatus @default(PENDING)
+
+    // relations
+    project   Project @relation(fields: [projectId], references: [id])
+    applicant User    @relation(fields: [applicantId], references: [id])
+}
+
+enum ApplicationStatus {
+    PENDING
+    ACCEPTED
+    REJECTED
+}
+
+model ProjectMember {
+    id        Int @id @default(autoincrement())
+    projectId Int
+    userId    Int
+
+    // relations
+    project Project @relation(fields: [projectId], references: [id])
+    user    User    @relation(fields: [userId], references: [id])
+}
